@@ -4,7 +4,7 @@ import {CrosswordProvider, CrosswordGrid, DirectionClues} from '@jaredreisinger/
 const clue = '';
 const data = {
   across: {
-    1: { clue: 'Banned word/sound from chat', answer: 'PSPSPSPS', row: 0, col: 0 },
+    1: { clue: 'Banned word/sound from the chat', answer: 'PSPSPSPS', row: 0, col: 0 },
     4: { clue: 'Units place of the solution to the equation: x^2-2248x+1263376=0 ', answer: 'FOUR', row: 4, col: 4 },
     5: { clue: 'Half the reader :p', answer: 'PERF', row: 3, col: 7},
     7: { clue: 'TIL it stands   for Hennes and Mavitz', answer: 'H&M', row: 6, col: 5},
