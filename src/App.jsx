@@ -34,19 +34,31 @@ const data = {
 };
 
 
+function openYouTubeLink(link) {
+  // Check if the link is a valid YouTube URL
+  // const youtubeRegExp = /^(http(s)?:\/\/)?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/)/;
+  // if (!youtubeRegExp.test(link)) {
+  //   console.error('Invalid YouTube link!');
+  //   return;
+  // }
+  // Open the YouTube link in a new window or tab
+  window.open(link, '_blank');
+}
+
+
 const App = () => {
   return (
     <div style={{ width: '40em', display: 'flex' }}>
       {/* 
   <Crossword data={data} useStorage={false} />
   </ThemeProvider> */}
-  <CrosswordProvider data={data}>
+  <CrosswordProvider data={data} onCrosswordCorrect={()=>openYouTubeLink("https://drive.google.com/file/d/19z5jaEGTTfFpkXbz8TObGYY7aupkrjpY/view?usp=sharing")}>
   <div style={{ display: 'flex', gap: '2em' }}>
-    <DirectionClues direction="across" />
-    <div style={{ width: '50em' }}>
+    <DirectionClues direction="across" label="I'd go ACROSS the seven seas for you!"/>
+    <div style={{ width: '50em' }}> 
       <CrosswordGrid />
     </div>
-    <DirectionClues direction="down" />
+    <DirectionClues direction="down" label="I'm DOWN bad for you :p" />
   </div>
 </CrosswordProvider>;
 </div>
